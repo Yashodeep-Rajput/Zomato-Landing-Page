@@ -10,7 +10,7 @@
     background-size: cover;
     background-position: center;
     color: white;
-    min-height: 60vh;
+    min-height: 80vh;
 }
 
 .navbar{
@@ -43,6 +43,60 @@
     display: none;
 }
 
+.hero__section_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: calc(60vh - 65px );
+}
+
+.hero__section_logo{
+    width: 300px;
+    height: 60px;
+}
+
+.hero__section_title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 350;
+}
+
+.hero__section_input_container{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 30%;
+    border-radius: 15px;
+}
+
+.input_container_location, .input_container_search{
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.input_container_location{
+    width: 35%;
+    border-right: 2px solid #e0e0e0;
+}
+
+.input_container_search{
+    width: 65%;
+}
+
+.hero__section_input_container .location_icon{
+    color: red;
+}
+
+.hero__section_input_container .search_icon{
+    color: black;
+}
+
 @media only screen and (max-width: 600px){
     .navbar__menu_container .user_icon{
         display: flex;
@@ -53,4 +107,68 @@
     .hero__section{
         min-height: 80vh;
     }
-    
+    .hero__section_container{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;        
+    }
+    .input_container_location,
+    .input_container_search{
+        padding: 18px;
+        border-radius: 10px;
+        width: 97%;
+    }
+    .hero__section_container{
+        height: calc(80vh - 40px);
+    }
+    .hero__section_title{
+        font-size: 18px;
+        width: 95%;
+    }
+}
+
+.container{
+    margin: 3rem auto;
+    width: 90%;
+}
+
+.we_offer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.we_offer_card{
+    border-radius: 10px;
+    background-color: transparent;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: all 0.5s ease-in-out;
+    margin-right: 20px; 
+}
+.we_offer_card:hover{
+    transform: scale(1.06);
+}
+
+.we_offer_card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.we_offer_content{
+    padding: 10px;
+}
+
+.we_offer_content h2{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.we_offer_content p{
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.7;
+}
